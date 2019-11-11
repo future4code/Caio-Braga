@@ -1,9 +1,9 @@
 * {
     margin: 0;
 }
-.Header {
+.header {
     background-color: #80AD74;
-    color: black;
+    color: #5E2F5E;
     height: 180px;
 }
 h1 {
@@ -27,6 +27,13 @@ h3 {
     right: 10px;
     top: 50px;
 }
+.menu {
+    color: #5E2F5E;
+    position: relative;
+    font-size: 20px;
+    left: 25px;
+    top: 25px;
+}
 .body {
     background-color: #F1FFED;
     position: relative;
@@ -38,4 +45,13 @@ h3 {
     position: relative;
     top: 20px;
     left: 20px;
+}
+.footer {
+    background-color: #5E2F5E;
+    position: relative;
+    height: 180px;
+}
+.texto-footer {
+    color: #F1FFED;
+    
 }

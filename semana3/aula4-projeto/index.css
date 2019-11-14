@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*cabelho*/
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    background-color: #DAE5E8;
+    text-align: left;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    
+}
+/*barra de navegação*/
+nav {
+    display: in;
+}
+nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+nav li {
+    display: inline;
+    background-color: #dddddd;
+    padding: 20px;
+}
+nav li:hover {
+    background-color: #606060;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+/*coteudo da pagina*/
+#main-container{
+    display: grid;
+    width: 85%;
+    margin-top: 7%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "um"
+                         "dois"
+                         "tres";
+}
+/*configuração das três seçoes*/
+section{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 2% 5%;
+
+}
+/*configuração grid area*/
+section#parte1{
+    grid-area: um;
+}
+section#parte2{
+    grid-area: dois;
+}
+section#parte3{
+    grid-area: tres;
+}
+article{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+article.artigo1{
+    display: grid;
+    justify-self:center;
+}
+article.artigo2{
+    display: grid;
+    justify-self: center;
+}
+
+/*rodapé*/
+footer {
+    width: 100%;
+    height: 18vh;
+    position: fixed;
+    bottom: 0; 
+    border-top: 1px solid black; 
+    text-align: center;
+}

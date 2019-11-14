@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (min-device-width : 200px) and (max-device-width : 420px){
+
+body{
+    background-color:  #DAE5E8;
+
+}
+
+main{
+    height: 180rem;
+
+}
+
+
+header{
+    background-color: #DAE5E8;
+    text-align: center;
+}
+
+header img{
+    width: 30vw;
+}
+
+#container-topo{
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: flex;
+    letter-spacing: 4px;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0px;
+}
+
+#container-topo p{
+    padding-left: 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    height: 145rem;
+    background-color: #DAE5E8;
+    align-items: center;
+    padding-top: 20px;
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+
+}
+
+section span{
+    text-decoration: line-through;
+}
+
+.tenis-produtos img{
+    width: 80vw;
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+footer{
+    background-color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
+
+
+
+}
+
+footer h2{
+    letter-spacing: 5px;
+
+}
+
+footer input{
+    width: 90vw;
+    height: 5vh;
+    color: grey;
+    margin-top: 5vh;
+}
+
+footer button{
+    width: 90vw;
+    height: 5vh;
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 4px;
+    font-size: 20px;
+    border: none;
+}
+
+.sociais {
+    margin-top: 2rem;
+    background-color: white;
+    font-size: 2rem;
+}
+.sociais img{
+    margin-top: 3rem;
+}
+}

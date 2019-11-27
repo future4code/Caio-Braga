@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './input.js'
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
         <div className="App-posts">
           <h3>Foto</h3>
         </div>
+        <button onClick>Curtir</button>
+          <button onClick>Comentar</button>
       </section>
     </div>
   );

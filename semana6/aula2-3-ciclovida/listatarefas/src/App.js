@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import PropTypes from 'prop-types';
+import Filtro from './Filtro'
 
 const Principal = styled.div `
 display: flex;
@@ -29,6 +30,7 @@ function App() {
       <Adicionar>
         Adicionar
       </Adicionar>
+      <Filtro></Filtro>
 
     </Principal>
   )

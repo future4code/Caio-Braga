@@ -28,7 +28,7 @@ class PokeAPI extends React.Component {
         const pokemonDetailsURL = event.target.value;
         const response = await axios.get(pokemonDetailsURL);
         const photoURL = response.data.sprites.front_default;
-        this.state({ selectedPokemonPhoto: photoURL})
+        this.setState({ selectedPokemonPhoto: photoURL})
     }
 
     render(){

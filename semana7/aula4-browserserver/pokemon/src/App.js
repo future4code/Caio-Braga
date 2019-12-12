@@ -1,5 +1,5 @@
 import React from 'react';
-import PokeAPI from ''
+import PokeAPI from './components'
 
 function App() {
   return (

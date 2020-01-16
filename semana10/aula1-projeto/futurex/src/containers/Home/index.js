@@ -9,7 +9,7 @@ const HomePage = (props) => {
         <div>
             Future X - Viagens interplanetárias
             <button onClick={props.goToLogin}>Cadastro/Login</button>
-            <button onClick={props.goToAbout}>Dúvidas</button>
+            <button onClick={props.goToAppForm}>Inscrições</button>
         </div>
     )
 }
@@ -18,7 +18,7 @@ const HomePage = (props) => {
 function mapDispatchToProps(dispatch) {
     return {
         goToLogin: () => dispatch(push(routes.login)),
-        goToAbout: () => dispatch(push(routes.about))
+        goToAppForm: () => dispatch(push(routes.application))
     }
 }
 

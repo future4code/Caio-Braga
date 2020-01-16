@@ -4,6 +4,7 @@ import { push } from "connected-react-router";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styled from "styled-components";
+import { login } from "../../Actions/login";
 
 const LoginWrapper = styled.form`
   width: 100%;
@@ -29,6 +30,12 @@ class LoginPage extends Component {
     });
   };
 
+  handleLoginButton = () => {
+    const { email, password } = this.state;
+
+    this.props.login(email, password)
+  }
+
   render() {
     const { email, password } = this.state;
 
@@ -45,13 +52,17 @@ class LoginPage extends Component {
           onChange={this.handleFieldChange}
           name="password"
           type="password"
-          label="Password"
+          label="Senha"
           value={password}
         />
-        <Button>Login</Button>
+        <Button onClick={this.handleLoginButton}>Login</Button>
       </LoginWrapper>
     );
   }
 }
 
-export default connect()(LoginPage);
+const mapDispatchToProps = (dispatch) => ({
+  login: (email, password) => dispatch(login(email, password))
+})
+
+export default connect(null, mapDispatchToProps)(LoginPage);

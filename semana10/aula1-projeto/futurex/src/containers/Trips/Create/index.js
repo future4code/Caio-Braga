@@ -4,25 +4,40 @@ import { push } from "connected-react-router";
 import { routes } from "../../Router";
 
 
-const CreateTrip = (props) => {
-    return (
-        <div>
+class CreateTrip extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        const token = window.localStorage.getItem('token')
+
+        if (token === null) {
+            this.props.goToLogin()
+        }
+    }
+
+    render() {
+        return (
+            <div>
             <h1>Criar Viagem</h1>
             <p>
                 Aqui você pode criar novas viagens
             </p>
-            <button onClick={props.goToDetails}>Gerenciar</button>
-            <button onClick={props.goToList}>Lista de Viagens</button>
+            <button onClick={this.props.goToDetails}>Gerenciar</button>
+            <button onClick={this.props.goToList}>Lista de Viagens</button>
             
-        </div>
-    )
+        </div> 
+        )
+    }
 }
 
 
 function mapDispatchToProps(dispatch) {
     return {
         goToDetails: () => dispatch(push(routes.tripDetails)),
-        goToList: () => dispatch(push(routes.tripList))
+        goToList: () => dispatch(push(routes.tripList)),
+        goToLogin: () => dispatch(push(routes.login))
     }
 }
 

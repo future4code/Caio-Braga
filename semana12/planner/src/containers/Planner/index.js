@@ -11,12 +11,16 @@ justify-content: center;
 padding: 30px;
 margin: 0 auto;
 `
-const TaskButton = styled.button `
+const CreateButton = styled.button `
 width: 100px;
 `
 
 const Dropdown = styled.select `
 width: 150px;
+`
+
+const GetButton = styled.button `
+width: 100px;
 `
 
 
@@ -28,13 +32,20 @@ class Planner extends React.Component {
     }
   }
 
-handleCreateTask = (event) => {
+handlecreateTask = (event) => {
   event.preventDefault();
 
-  const { text } = this.state.select
+  const { day } = this.state.select
 
-  this.props.createTask(text)
+  this.props.createTask(day)
   this.setState({select:{}})
+}
+
+handlegetTasks = (event) => {
+  event.preventDefault();
+
+  this.props.getTasks()
+  this.setState({button:{}})
 }
 
   render() {
@@ -53,7 +64,11 @@ handleCreateTask = (event) => {
           <option>Domingo</option>
         </Dropdown>
 
-        <TaskButton onClick = {this.handleCreateTask}>Criar Tarefa</TaskButton>
+        <CreateButton onClick = {this.handlecreateTask}>Criar Tarefa</CreateButton>
+
+        <GetButton>Baixar tarefas</GetButton>
+
+
 
       </MainContainer>
     );

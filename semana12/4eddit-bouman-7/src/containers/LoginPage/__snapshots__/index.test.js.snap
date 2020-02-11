@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `<handleLoginButton />`;
+
+exports[`Snapshot 2`] = `<handleLoginButton />`;

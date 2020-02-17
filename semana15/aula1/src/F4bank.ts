@@ -31,3 +31,5 @@ class JSONFileManager {
     getObjectFromFile(): object
     writeObjectToFile(): void
 }
+
+const caio: UserAccount = new UserAccount()

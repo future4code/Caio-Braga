@@ -16,4 +16,7 @@ export class SaltyDish extends Dish {
 }
 
 const feijoada = new SaltyDish(100, 20, ["leite condensado"], 100);
+const hamburger = new SaltyDish(80, 15, ["pão, carne, queijo, cebola, tomate"], 40);
 console.log(feijoada.getProfit());
+console.log(hamburger.getProfit());
+

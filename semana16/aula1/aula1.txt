@@ -1,0 +1,75 @@
+1.
+a) 
+select first_name, last_name
+from actors
+where last_name like "%a%"
+
+b) 
+select last_name
+from actors
+where first_name like "%DAN%" or "%JULIA%"
+
+c) 
+select first_name, last_name
+from actors
+where first_name like "ANGELINA" or "%B%"
+
+2.
+Setup
+use `bouman-caio`;
+create table actors(
+actor_id int primary key,
+first_name varchar(45) not null,
+last_name varchar(45) not null
+);
+
+use `bouman-caio`;
+insert into actors (actor_id, first_name, last_name)
+values (1, "Alessandra", "Negrini"),
+       (2, "Paola", "Oliveira"),
+       (3, "Marina", "Ruy Barbosa")
+
+a)
+use exercicios;
+select title, description
+from films
+where length > 120
+
+b)
+use exercicios;
+select description, release_year, rating
+from films
+where description like "%documentary%"
+
+c)
+use exercicios;
+select title, release_year, special_features
+from films
+where rating like "NC-17"
+
+d)
+use exercicios;
+select film_id, title, description, release_year, length, rating, special_features
+from films
+where special_features like "%trailers%" and title like "%d%" and rating not like "G" or "PG"
+
+extra
+
+use `bouman-caio`;
+create table films (
+id int(10) not null,
+title varchar(128) not null,
+description varchar(255),
+release_year year(4),
+length int(11),
+rating enum("G", "PG", "PG-13","R", "NC - 17"),
+special_features set("Trailers", "Commentaries", "Deleted Scenes", "Behind the Scenes")
+);
+
+use `bouman-caio`;
+insert into films (id, title, release_year)
+values (1, "Matrix", 1999),
+	   (2, "Star Wars", 1977),
+       (3, "Highlander", 1986),
+       (4, "A Sociedade do Anel", 2002),
+       (5, "Avengers", 2012)

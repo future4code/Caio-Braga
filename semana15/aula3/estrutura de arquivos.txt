@@ -1,0 +1,2 @@
+place é a classe abstrata, que é pai das classes industry, commerce e residence. essas três são classes filhas do place. client é a interface que contém dados que são comuns a 
+todas as classes, que a implementam.

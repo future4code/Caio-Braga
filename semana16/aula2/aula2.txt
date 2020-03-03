@@ -1,0 +1,103 @@
+Exercícios da tarde, aula 2 SQL
+ 
+  CIDADES
+1.
+select *
+from city
+order by population desc
+limit 5;
+
+2.
+select avg(population), District
+from city
+group by District;
+
+3.
+select count(name), district
+from city
+group by district;
+
+4.
+select count(*), countrycode
+from city
+group by countrycode
+limit 10;
+
+  PAÍSES
+
+1.
+select *
+from country
+where population > 100000
+limit 100;
+
+2.
+select count(*)
+from country
+where population > 5000000;
+
+3.
+select sum(population) as "Soma de População"
+from country
+where continent = "Asia"
+
+4.
+select count(*)
+from country
+where governmentform like "%Republic%" and "%Monarchy%";
+
+5.
+select count(governmentform)
+from country
+where governmentform = "Republic"
+
+6.
+select avg(Population)
+from country
+where Continent = "North America";
+(repetir o procedimento com os outros continentes)
+
+7.
+select *
+from country
+order by IndepYear desc
+limit 10;
+
+8.
+select lower(name), avg(LifeExpectancy)
+from country
+where Continent = "North America"
+group by name, LifeExpectancy;
+(repetir o procedimento com os outros continentes)
+
+9.
+select *
+from country
+order by SurfaceArea desc
+limit 3;
+
+   ESCRITA
+1.
+alter table films
+add watched bool default false;
+
+2.
+*não pus rating nos filmes da minha tabela no exercício de ontem, então fiz outra coisa, só pra praticar. Setei todos os 5 filmes da minha lista como watched = true (Update sem where hahaha) e depois setei o único que não assisti (Highlander) como false
+
+update films
+set watched = true
+
+update films 
+set watched = false
+where title = "Highlander"
+
+3.
+alter table films
+add lucky_number numeric default 0;
+
+4.
+update films
+set lucky_number = floor(rand()*(1000-1+1)+5)
+
+
+

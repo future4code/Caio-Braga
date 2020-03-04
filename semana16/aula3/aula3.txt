@@ -1,0 +1,74 @@
+Exercícios da tarde 
+1.
+1-1 criando a tabela autores:
+create table autores (
+id int,
+primeiro_nome varchar(50),
+ultimo_nome varchar(100),
+nacionalidade varchar(50),
+primary key (id)
+);
+
+1-2 criando a tabela editoras:
+create table editoras (
+id int,
+nome varchar(255),
+cidade varchar(255),
+fundacao date,
+primary key (id)
+);
+
+1-3 criando a tabela livros:
+create table livros (
+id int,
+titulo varchar(255),
+autor_id int,
+editora_id int,
+ano date,
+primary key (id),
+foreign key (autor_id) references autores(id),
+foreign key (editora_id) references editoras(id)
+);
+
+1-4 criando a tabela usuários:
+create table usuarios (
+id int,
+primeiro_nome varchar(50),
+ultimo_nome varchar(100),
+nacionalidade varchar(50),
+data_nascimento date,
+primary key (id)
+);
+
+1-5 criando a tabela usuarios_livros:
+create table usuarios_livros (
+usuario_id int,
+livro_id int,
+primary key (usuario_id, livro_id),
+foreign key (usuario_id) references usuarios(id),
+foreign key (livro_id) references livros(id)
+);
+
+2.
+O exercício 2 consiste basicamente em copiar as queries para as nossas tabelas, por isso não vi necessidade de colá-las aqui.
+
+3.
+3-1
+select titulo, primeiro_nome, ultimo_nome
+from livros
+join autores
+on autores.primeiro_nome like "J. K.";
+
+3-2
+select titulo, primeiro_nome, ultimo_nome
+from livros
+join autores
+order by primeiro_nome asc
+limit 480
+
+3-3
+select count(*)
+from autores
+join livros
+on autores.id = livros.autor_id
+order by titulo, primeiro_nome

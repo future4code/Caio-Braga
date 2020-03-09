@@ -1,9 +1,16 @@
 import { Request, Response } from "express";
 import { GetUserByEmailUC } from "../../business/usecase/getUserByEmail";
+import { EditUserUC } from "../../business/usecase/editUser";
+import { UserDB } from "../../data/userDataBase";
 
-export const getUserByEmail = async (req: Request, res: Response) => {
+export const editUserByEmail = async (req: Request, res: Response) => {
   try {
-    // CHAMAR USE CASE
+    const editUserUC = new EditUserUC(new UserDB())
+    const result = await editUserUC.execute({
+      id: req.body.id,
+      email: req.body.email,
+      name: req.body.name
+    })
     res.status(200).send({
       msg: "success"
     });

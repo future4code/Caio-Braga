@@ -1,6 +1,9 @@
 import { User } from "../entities/user";
+import { UserDB } from "../../data/userDataBase";
 
 export class GetUserByEmailUC {
+  constructor(private userDB: UserDB) {}
+
   public async execute(
     input: GetUserByEmailUCInput
   ): Promise<GetUserByEmailUCOutput> {
@@ -8,7 +11,11 @@ export class GetUserByEmailUC {
       throw new Error("Invalid email");
     }
 
-    const user = new User("", "", "", new Date());
+    const user = await this.userDB.getUserByEmail(input.email)
+
+    if(!user) {
+      throw new Error("User not found")
+    }
 
     return {
       id: user.getId(),

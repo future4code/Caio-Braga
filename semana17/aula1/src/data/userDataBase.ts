@@ -1,5 +1,6 @@
 import knex from "knex";
 import { User } from "../business/entities/user";
+import { getUserByEmail } from "../presentation/endpoints/getUserByEmail";
 
 export class UserDB {
   private connection = knex({
@@ -70,4 +71,24 @@ VALUES(
     WHERE id='${user.getId()}';
     `);
   }
+
+  public async getUserByEmail(email: string): Promise<User | undefined> {
+    const result = await this.connection.raw(
+      `SELECT * FROM ${this.userTableName} WHERE email =${email}`
+    )
+
+    if(result[0][0] === undefined) {
+      return undefined
+    }
+
+    return new User(
+      result[0][0].id,
+      result[0][0].name,
+      result[0][0].email,
+      new Date(result[0][0].birthDate)
+
+    )
+  }
 }
+
+  

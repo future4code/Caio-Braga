@@ -1,6 +1,5 @@
 import { v4 } from "uuid";
 import { User } from "../entities/user";
-// import { UserDB } from "../../data/userDB";
 import * as bcrypt from "bcrypt";
 
 interface SignupInput {
@@ -19,9 +18,6 @@ export class SignupUC {
 
             const newUser = new User(userId, input.email, hashPassword, input.name)
 
-            const userDB = new UserDB()
-
-            await userDB.createUser(newUser)
         } catch (e) {
             console.log(e)
             throw new Error("Problema ao criar usuário")

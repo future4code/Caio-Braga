@@ -1,0 +1,12 @@
+exports.handler = async event => {
+  const number1 = 3
+  const number2 = 5
+  return {
+   statusCode:200,
+   body: JSON.stringify(
+     {
+      soma: number1+number2
+   }
+  )
+ }
+}

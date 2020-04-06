@@ -2,11 +2,11 @@ import knex from "knex";
 
 export abstract class BaseDatabase {
   private connectionData = {
-    host: "<EMPTY>",
+    host: "ec2-18-229-236-15.sa-east-1.compute.amazonaws.com",
     port: 3306,
-    user: "<EMPTY>",
-    password: "<EMPTY>",
-    database: "<EMPTY>"
+    user: "caio",
+    password: "j13nYIzi5mebVPRT37G~",
+    database: "bouman-caio"
   };
 
   protected connection = knex({

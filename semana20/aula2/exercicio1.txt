@@ -1,0 +1,11 @@
+a. Não, após analizá-lo, entendi o que ele faz.
+
+b. Retorna um erro 400 com uma mensagem indicando o que estava vazio/errado.
+
+c. Retornaria um erro, pois a propriedade "name" não estaria dentro da propriedade "info", como é esperado.
+
+d. Retornaria "User is correct", mas para isso, precisaria também de um email e senha válidos. Só com o user.info.name ele retornaria o código 400 com as mensagens de "missing email" e "invalid password"
+
+e. Retornaria erro 400 com a mensagem "invalid password" por ser menos de 6 dígitos.
+
+f. Retornaria o status 200 com a mensagem "User is correct"

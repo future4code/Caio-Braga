@@ -1,0 +1,14 @@
+			EXERCÍCIO 1
+
+1. Para darmos deploy em um projeto para o EC2, precisaria apenas abrir o terminal, acessar a pasta onde o projeto se encontra, e subi-lo para o EC2 utilizando o comando npm run build.
+
+3. ssh -i nome-da-chave ubuntu@ip-da-maquina
+
+4. git clone, usando http. npm install para as dependencias do projeto, e então npm run build
+
+
+
+			EXERCÍCIO 2
+
+4. Consegui terminar tudo, levou mais tempo do que imaginei, por falta de prática, conhecimento e alguns erros na hora de seguir as intruções. Seguindo os passos foi até bem fácil, as dificuldades foram dealhes de sintaxe, erros de digitação, e o que precisavar ser rodado dentro ou fora do node, dentro ou fora do mysql, confundiu um pouco e me fez perder tempo. Também perdi bastante tempo no final pra editar o arquivo de texto com o 127.0.0.1 para 0.0.0.0, fiquei pensando que precisava de algum comando específico pra editar texto pelo terminal, depois fui perceber que dava pra ir pelas setas do teclado.
+
